@@ -13,7 +13,7 @@ final class WeatherView: CodedView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textColor = .black
         return label
     }()
@@ -25,19 +25,20 @@ final class WeatherView: CodedView {
     
     private let temperatureImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.backgroundColor = .red
         return imageView
     }()
     
     private let temperatureLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.font = .systemFont(ofSize: 48, weight: .regular)
         label.textColor = .black
         return label
     }()
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.font = .systemFont(ofSize: 14, weight: .regular)
         label.textColor = .black
         return label
     }()
@@ -64,7 +65,8 @@ final class WeatherView: CodedView {
     
     private func constrainTitleLabel() {
         titleLabel.anchor(
-            top: topAnchor
+            top: safeTopAnchor,
+            topConstant: 16
         )
         titleLabel.anchorCenterXToSuperview()
     }
@@ -72,16 +74,18 @@ final class WeatherView: CodedView {
     private func constrainCenterView() {
         centerView.anchor(
             top: titleLabel.bottomAnchor,
-            topConstant: 16
+            topConstant: 32
         )
         centerView.anchorCenterXToSuperview()
     }
     
     private func constrainTemperatureImageView() {
         temperatureImageView.anchor(
-            top: centerView.topAnchor,
-            leading: centerView.leadingAnchor
+            leading: centerView.leadingAnchor,
+            widthConstant: 48,
+            heightConstant: 48
         )
+        temperatureImageView.centerYAnchor.constraint(equalTo: temperatureLabel.centerYAnchor).isActive = true
     }
     
     private func constrainTemperatureLabel() {
@@ -100,5 +104,14 @@ final class WeatherView: CodedView {
             topConstant: 16
         )
         descriptionLabel.anchorCenterXToSuperview()
+    }
+    
+    // MARK: - Public Methods
+    
+    func setupViewData(_ viewData: Home.Weather.ViewData) {
+        titleLabel.text = viewData.cityName
+        temperatureImageView.image = viewData.image
+        temperatureLabel.text = viewData.temperature
+        descriptionLabel.text = viewData.temperatureDescription
     }
 }

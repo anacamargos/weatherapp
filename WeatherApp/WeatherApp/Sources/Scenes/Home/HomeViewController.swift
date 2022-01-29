@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol HomeDisplayLogic: AnyObject {}
+protocol HomeDisplayLogic: AnyObject {
+    func displayWeatherViewState(_ viewState: Home.Weather.ViewState)
+}
 
 final class HomeViewController: UIViewController {
     
@@ -38,4 +40,9 @@ final class HomeViewController: UIViewController {
 
 // MARK: - HomeDisplayLogic
 
-extension HomeViewController: HomeDisplayLogic {}
+extension HomeViewController: HomeDisplayLogic {
+    
+    func displayWeatherViewState(_ viewState: Home.Weather.ViewState) {
+        contentView?.setupWeatherState(viewState)
+    }
+}

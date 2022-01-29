@@ -16,6 +16,11 @@
 		BFF88ACA27A578E500EE9454 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AC927A578E500EE9454 /* ViewCode.swift */; };
 		BFF88ACC27A57A9000EE9454 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88ACB27A57A9000EE9454 /* WeatherView.swift */; };
 		BFF88ACE27A57CB400EE9454 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88ACD27A57CB400EE9454 /* UIView+Autolayout.swift */; };
+		BFF88AD027A580B900EE9454 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88ACF27A580B900EE9454 /* HomeModels.swift */; };
+		BFF88AD427A5823C00EE9454 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AD327A5823C00EE9454 /* CustomLoadingView.swift */; };
+		BFF88AD627A5836B00EE9454 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AD527A5836B00EE9454 /* EmptyView.swift */; };
+		BFF88AD827A583F500EE9454 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AD727A583F500EE9454 /* ErrorView.swift */; };
+		BFF88ADA27A5862C00EE9454 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AD927A5862C00EE9454 /* UIImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		BFF88AC927A578E500EE9454 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		BFF88ACB27A57A9000EE9454 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		BFF88ACD27A57CB400EE9454 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		BFF88ACF27A580B900EE9454 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		BFF88AD327A5823C00EE9454 /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
+		BFF88AD527A5836B00EE9454 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		BFF88AD727A583F500EE9454 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BFF88AD927A5862C00EE9454 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 		BFF88AC027A5785500EE9454 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BFF88AD127A5822300EE9454 /* UI */,
 				BFF88AC827A578D500EE9454 /* Extensions */,
 				BFF88AC127A5785F00EE9454 /* Scenes */,
 			);
@@ -94,6 +105,7 @@
 			children = (
 				BFF88AC427A5788500EE9454 /* HomeViewController.swift */,
 				BFF88AC327A5787600EE9454 /* Views */,
+				BFF88ACF27A580B900EE9454 /* HomeModels.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -112,8 +124,27 @@
 			children = (
 				BFF88AC927A578E500EE9454 /* ViewCode.swift */,
 				BFF88ACD27A57CB400EE9454 /* UIView+Autolayout.swift */,
+				BFF88AD927A5862C00EE9454 /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFF88AD127A5822300EE9454 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BFF88AD227A5823000EE9454 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BFF88AD227A5823000EE9454 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF88AD327A5823C00EE9454 /* CustomLoadingView.swift */,
+				BFF88AD527A5836B00EE9454 /* EmptyView.swift */,
+				BFF88AD727A583F500EE9454 /* ErrorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,13 +217,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF88AD027A580B900EE9454 /* HomeModels.swift in Sources */,
 				BFF88AAB27A5763800EE9454 /* AppDelegate.swift in Sources */,
 				BFF88ACE27A57CB400EE9454 /* UIView+Autolayout.swift in Sources */,
+				BFF88ADA27A5862C00EE9454 /* UIImageExtensions.swift in Sources */,
 				BFF88ABF27A5782200EE9454 /* SceneDelegate.swift in Sources */,
 				BFF88AC727A5789500EE9454 /* HomeContentView.swift in Sources */,
 				BFF88ACC27A57A9000EE9454 /* WeatherView.swift in Sources */,
+				BFF88AD627A5836B00EE9454 /* EmptyView.swift in Sources */,
 				BFF88AC527A5788500EE9454 /* HomeViewController.swift in Sources */,
+				BFF88AD427A5823C00EE9454 /* CustomLoadingView.swift in Sources */,
 				BFF88ACA27A578E500EE9454 /* ViewCode.swift in Sources */,
+				BFF88AD827A583F500EE9454 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
