@@ -12,6 +12,9 @@
 		BFF88AB427A5763A00EE9454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF88AB327A5763A00EE9454 /* Assets.xcassets */; };
 		BFF88AB727A5763A00EE9454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF88AB527A5763A00EE9454 /* LaunchScreen.storyboard */; };
 		BFF88ABF27A5782200EE9454 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88ABE27A5782200EE9454 /* SceneDelegate.swift */; };
+		BFF88AC527A5788500EE9454 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AC427A5788500EE9454 /* HomeViewController.swift */; };
+		BFF88AC727A5789500EE9454 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AC627A5789500EE9454 /* HomeContentView.swift */; };
+		BFF88ACA27A578E500EE9454 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF88AC927A578E500EE9454 /* ViewCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		BFF88AB627A5763A00EE9454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFF88AB827A5763A00EE9454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF88ABE27A5782200EE9454 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BFF88AC427A5788500EE9454 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BFF88AC627A5789500EE9454 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		BFF88AC927A578E500EE9454 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		BFF88AA927A5763800EE9454 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				BFF88AC027A5785500EE9454 /* Sources */,
 				BFF88AAA27A5763800EE9454 /* AppDelegate.swift */,
 				BFF88ABE27A5782200EE9454 /* SceneDelegate.swift */,
 				BFF88AAE27A5763800EE9454 /* ViewController.swift */,
@@ -62,6 +69,48 @@
 				BFF88AB827A5763A00EE9454 /* Info.plist */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		BFF88AC027A5785500EE9454 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BFF88AC827A578D500EE9454 /* Extensions */,
+				BFF88AC127A5785F00EE9454 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BFF88AC127A5785F00EE9454 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BFF88AC227A5786900EE9454 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BFF88AC227A5786900EE9454 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BFF88AC427A5788500EE9454 /* HomeViewController.swift */,
+				BFF88AC327A5787600EE9454 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BFF88AC327A5787600EE9454 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF88AC627A5789500EE9454 /* HomeContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFF88AC827A578D500EE9454 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFF88AC927A578E500EE9454 /* ViewCode.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +186,9 @@
 				BFF88AAF27A5763800EE9454 /* ViewController.swift in Sources */,
 				BFF88AAB27A5763800EE9454 /* AppDelegate.swift in Sources */,
 				BFF88ABF27A5782200EE9454 /* SceneDelegate.swift in Sources */,
+				BFF88AC727A5789500EE9454 /* HomeContentView.swift in Sources */,
+				BFF88AC527A5788500EE9454 /* HomeViewController.swift in Sources */,
+				BFF88ACA27A578E500EE9454 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
