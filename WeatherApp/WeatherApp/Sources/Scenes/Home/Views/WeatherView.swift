@@ -25,7 +25,6 @@ final class WeatherView: CodedView {
     
     private let temperatureImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
         return imageView
     }()
     

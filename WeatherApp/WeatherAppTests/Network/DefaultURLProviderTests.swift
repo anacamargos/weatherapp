@@ -13,10 +13,10 @@ final class DefaultURLProviderTests: XCTestCase {
     func test_getBaseURL_shouldReturnCorrectURL() {
         // Given
         let sut = makeSUT()
-        let expectedURL = "http://localhost:3000"
+        let expectedURL = "https://www.metaweather.com/"
 
         // When
-        let receivedURL = sut.getBaseURL(forServiceGroup: .vuttr)
+        let receivedURL = sut.getBaseURL(forServiceGroup: .metaWeather)
 
         // Then
         XCTAssertEqual(expectedURL, receivedURL)

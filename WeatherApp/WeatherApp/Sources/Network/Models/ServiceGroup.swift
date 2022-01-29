@@ -10,7 +10,7 @@ import Foundation
 /// Defines a service group to provide URLs
 /// A ServiceGroup is a sum of endpoints that exist on the applications context.
 enum ServiceGroup {
-    case vuttr
+    case metaWeather
 }
 
 /// Defines a  provider of URLs
@@ -42,15 +42,15 @@ final class DefaultURLProvider: URLProvider {
         var url: String
 
         switch group {
-        case .vuttr:
-            url = getVuttrURL()
+        case .metaWeather:
+            url = getMetaWeatherURL()
         }
-        return http + url
+        return https + url
     }
 
     // MARK: - Private Methods
 
-    private func getVuttrURL() -> String {
-        return "localhost:3000"
+    private func getMetaWeatherURL() -> String {
+        return "www.metaweather.com/"
     }
 }

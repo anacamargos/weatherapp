@@ -123,14 +123,26 @@ extension HomeContentView: HomeContentViewProtocol {
         switch viewState {
         case let .content(viewData):
             weatherView.isHidden = false
+            errorView.isHidden = true
+            emptyView.isHidden = true
+            loadingView.isHidden = true
             weatherView.setupViewData(viewData)
         case .loading:
             loadingView.isHidden = false
+            weatherView.isHidden = true
+            errorView.isHidden = true
+            emptyView.isHidden = true
             loadingView.startLoading()
         case .empty:
             emptyView.isHidden = false
+            weatherView.isHidden = true
+            errorView.isHidden = true
+            loadingView.isHidden = true
         case .error:
             errorView.isHidden = false
+            weatherView.isHidden = true
+            emptyView.isHidden = true
+            loadingView.isHidden = true
         }
     }
 }
