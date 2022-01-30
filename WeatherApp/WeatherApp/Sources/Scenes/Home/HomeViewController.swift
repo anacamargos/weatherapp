@@ -47,7 +47,7 @@ final class HomeViewController: UIViewController {
     }
 
     override func loadView() {
-        view = HomeContentView()
+        view = HomeContentView(onTappedErrorViewClosure: { [weak self] in self?.handleOnTappedErrorViewAction() })
         contentView = view as? HomeContentViewProtocol
     }
     
@@ -57,6 +57,10 @@ final class HomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.prefersLargeTitles = false
         title = "WeatherApp"
+    }
+    
+    private func handleOnTappedErrorViewAction() {
+        interactor.reloadData()
     }
 }
 

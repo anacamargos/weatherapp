@@ -13,6 +13,10 @@ protocol HomeContentViewProtocol: AnyObject {
 
 final class HomeContentView: CodedView {
     
+    // MARK: - Dependencies
+    
+    private let onTappedErrorViewClosure: () -> Void
+    
     // MARK: - View Components
     
     private let weatherView: WeatherView = {
@@ -41,10 +45,13 @@ final class HomeContentView: CodedView {
     
     // MARK: - Initializers
 
-    override init(
-        frame: CGRect = .zero
+    init(
+        frame: CGRect = .zero,
+        onTappedErrorViewClosure: @escaping () -> Void
     ) {
+        self.onTappedErrorViewClosure = onTappedErrorViewClosure
         super.init(frame: frame)
+        configureGestureRecognizer()
     }
 
     @available(*, unavailable)
@@ -112,6 +119,15 @@ final class HomeContentView: CodedView {
             leadingConstant: 16,
             trailingConstant: 16
         )
+    }
+    
+    private func configureGestureRecognizer() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTappedErrorView))
+        errorView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc private func onTappedErrorView() {
+        onTappedErrorViewClosure()
     }
 }
 

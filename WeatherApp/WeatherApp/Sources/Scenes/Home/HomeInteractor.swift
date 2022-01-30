@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeBusinessLogic {
     func onViewDidLoad()
+    func reloadData()
 }
 
 final class HomeInteractor {
@@ -36,7 +37,7 @@ final class HomeInteractor {
             case let .success(response):
                 if let currentDayForecast = response.consolidatedWeather.first {
                     let temperatureImage = self?.retrieveImage(for: currentDayForecast.weatherStateAbbr) ?? .init()
-                    let viewData = Home.Weather.ViewData(cityName: response.title, image: temperatureImage, temperature: "\(currentDayForecast.theTemp)", temperatureDescription: currentDayForecast.weatherStateName)
+                    let viewData = Home.Weather.ViewData(cityName: response.title, image: temperatureImage, temperature: "\(currentDayForecast.theTemp)°C", temperatureDescription: currentDayForecast.weatherStateName)
                     self?.viewController?.displayWeatherViewState(.content(viewData))
                 } else {
                     self?.viewController?.displayWeatherViewState(.empty)
@@ -62,6 +63,10 @@ final class HomeInteractor {
 extension HomeInteractor: HomeBusinessLogic {
     
     func onViewDidLoad() {
+        loadLocationForecast()
+    }
+    
+    func reloadData() {
         loadLocationForecast()
     }
 }
