@@ -11,10 +11,12 @@
 - The app allows you to see the weather forecast in Toronto.
 - The project was made using a scaled-down version of Clean Swift Architecture (VIP).
 - Unit tests were made in the WeatherAppTests target, the project has 80,4% test coverage.
+- I hardcoded Toronto location ID because I was time-constrained and could not add the search feature.
+- To run the project clone this repository, open the WeatherApp folder and open the file WeatherApp.xcodeproj.
 
 ## 🎥 Videos
 
-
+https://user-images.githubusercontent.com/29712168/151709126-1aa0d2d8-543e-4865-964d-0221ca11fa6e.mov
 
 ## ✍️ Authors
 
