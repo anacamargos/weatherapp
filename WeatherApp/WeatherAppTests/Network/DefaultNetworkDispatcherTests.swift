@@ -136,6 +136,6 @@ final class HTTPClientMock: HTTPClient {
     }
 }
 
-struct CodableMock: Codable, Equatable, JSONConvertible {
+struct CodableMock: Codable, Equatable {
     let key: String
 }
