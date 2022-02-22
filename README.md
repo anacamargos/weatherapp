@@ -2,7 +2,7 @@
 <p>An iOS app that shows the weather forecast in Toronto</p>
 
 <p>
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/anacamargos/tvseries?color=ff69b4&style=flat-square"> 
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/anacamargos/weatherapp?color=ff69b4&style=flat-square"> 
   <img alt="GitHub issues" src="https://img.shields.io/badge/author-Ana%20Leticia%20Camargos-green?color=ff69b4&style=flat-square">
 </p>
 
